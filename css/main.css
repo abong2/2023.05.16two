@@ -60,3 +60,25 @@ p:hover span::after{
     width: 100%;
     transition: width 0.3s;
 }
+
+.p2{
+    font-weight: 700;
+    position: relative;
+    color: rgb(123, 17, 221);
+}
+.p2::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0px;
+    height: 3px;
+    /* background-color: aquamarine; */
+    background: linear-gradient(to right, #494646,#000000);
+    transition: width 0.3s ease-in-out;
+}
+.p2:hover span::after{
+    width: 100%;
+    transition: width 0.3s;
+}
