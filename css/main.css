@@ -1,0 +1,62 @@
+@charset "utf-8";
+input{
+    width: 100px;
+    height: 30px;
+    transition: 0.7s;
+}
+input:focus{
+    background-color: #aaa;
+    color: #fff;
+    width: 200px;
+    height: 80px;
+    font-size: 30px;
+}
+#chk{
+    width: 20px;
+    height: 20px;
+}
+#chk:checked~input{
+    width: 50px;
+    height: 50px;
+}
+#link{
+    color: #333;
+    text-decoration: none;
+    transition: 0.4s;
+}
+#link:hover{
+    background-color: lightblue;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fafafa;
+    text-decoration: line-through;
+    text-shadow: 2px 2px 5px black;    
+}
+#link:active{
+    background-color: rgb(0, 89, 253);
+}
+/* p::selection{
+background-color: rgb(218, 177, 255);
+color: dodgerblue;
+} */
+span{
+    font-weight: 700;
+    position: relative;
+    color: aquamarine;
+}
+span::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0px;
+    height: 3px;
+    /* background-color: aquamarine; */
+    background: linear-gradient(to right, #ff0000,#7700ff);
+    transition: width 0.3s ease-in-out;
+}
+p:hover span::after{
+    width: 100%;
+    transition: width 0.3s;
+}
